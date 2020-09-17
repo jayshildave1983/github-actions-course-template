@@ -1,18 +1,20 @@
-name: Giphy Generator
-on: 
+on:
   issues:
     types: [opened, edited]
   pull_request:
     types: [opened, edited]
   issue_comment:
     types: [created, edited]
-    
-  
+
+name: GIPHY Generator
+
 jobs:
   giphy-generator:
+    name: GIPHY Generator
     runs-on: ubuntu-latest
     steps:
       - name: GIPHY Generator
+        id: giphy_generator
         uses: iamhughes/giphy-generator@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
@@ -20,4 +22,3 @@ jobs:
         with:
           rating: 'g'
           lang: 'en'
-    

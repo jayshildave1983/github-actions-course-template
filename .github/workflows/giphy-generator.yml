@@ -2,9 +2,9 @@ name: Giphy Generator
 on: 
   issues:
     types: [opened, edited]
-  pull-requests:
+  pull-request:
     types: [opened, edited]
-  issue_comments:
+  issue_comment:
     types: [created, edited]
     
   

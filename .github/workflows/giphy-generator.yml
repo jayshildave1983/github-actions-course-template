@@ -6,6 +6,7 @@ on:
     types: [opened, edited]
   issue_comments:
     types: [created, edited]
+    
   
 jobs:
   giphy-generator:
